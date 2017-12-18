@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Example</title>
+</head>
+<body>
+
+<input type="text" [(ngModel)]="uname"/>
+<br/>
+<button (click)="sendData({message:uname})" >Send Data</button>
+<br/>
+
+<h1>{{data | json}}</h1>
+
+
+</body>
+</html>
