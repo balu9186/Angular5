@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import {GetExampleComponent} from "./HttpGetExample/Components/get.example.component";
 import {GetExampleService} from "./HttpGetExample/Services/get.example.service";
 
-import {PostExampleComponent} from "./HttpPostExample/Components/post.example.component";
-import {PostExampleService} from "./HttpPostExample/Services/post.example.service";
+import { PostExampleComponent } from "./HttpPostExample/Components/post.example.component";
+import { PostExampleService } from "./HttpPostExample/Services/post.example.service";
 
 
 @NgModule({
