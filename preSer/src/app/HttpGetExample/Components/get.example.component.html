@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Example</title>
+</head>
+<body>
+
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Subject</th>
+  </tr>
+  <tr *ngFor="let x of data">
+    <td>{{x.post.id}}</td>
+    <td>{{x.post.fname}}</td>
+    <td>{{x.post.fsubject}}</td>
+  </tr>
+</table>
+
+</body>
+</html>
