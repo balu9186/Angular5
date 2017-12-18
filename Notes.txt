@@ -1,0 +1,8 @@
+
+15/12/2017
+------------
+
+Pre-defined services examples
+
+    1. Http Get
+    2. Http Post
