@@ -6,3 +6,9 @@ Pre-defined services examples
 
     1. Http Get
     2. Http Post
+
+
+18/12/2017
+-------------
+
+Http Get example from Node server
