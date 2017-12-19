@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get from Node server</title>
+</head>
+<body>
+
+<!--<h1>{{data | json}}</h1>-->
+
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Cost</th>
+  </tr>
+  <tr *ngFor="let x of data">
+    <td>{{x.p_id}}</td>
+    <td>{{x.p_name}}</td>
+    <td>{{x.p_cost}}</td>
+  </tr>
+</table>
+
+</body>
+</html>

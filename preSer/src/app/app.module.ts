@@ -11,17 +11,21 @@ import {GetExampleService} from "./HttpGetExample/Services/get.example.service";
 import { PostExampleComponent } from "./HttpPostExample/Components/post.example.component";
 import { PostExampleService } from "./HttpPostExample/Services/post.example.service";
 
+import {GetNodeComponent} from "./HttpGetNodeServer/Components/get.node.component";
+import {GetNodeService} from "./HttpGetNodeServer/Services/get.node.service";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GetExampleComponent,
-    PostExampleComponent
+    PostExampleComponent,
+    GetNodeComponent
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule
   ],
-  providers: [GetExampleService,PostExampleService],
-  bootstrap: [PostExampleComponent]
+  providers: [GetExampleService,PostExampleService,GetNodeService],
+  bootstrap: [GetNodeComponent]
 })
 export class AppModule { }
