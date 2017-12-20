@@ -29,6 +29,7 @@ app.get('/newsql',function(req,res){
       /*//Data retrieving directly from table
       request.query('select * from tbl_Products',function(err,recordsArray){*/
 
+
       ///Data retrieving from Stored Procedure
       request.execute('stp_tbl_Products_Get',function(err,recordsArray){
 
