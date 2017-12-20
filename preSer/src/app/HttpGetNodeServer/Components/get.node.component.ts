@@ -5,7 +5,6 @@ import {GetNodeService} from "../Services/get.node.service";
   selector:'get-node',
   templateUrl:'./get.node.component.html'
 })
-
 export class GetNodeComponent{
   data:any;
 

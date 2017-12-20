@@ -5,7 +5,6 @@ import {NodeSqlService} from "../Services/node.sql.service";
   selector:'node-sql',
   templateUrl:'./node.sql.component.html'
 })
-
 export class NodeSqlComponent{
   data:any;
 

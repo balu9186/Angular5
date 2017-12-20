@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
 
-
 import { AppComponent } from './app.component';
 import {GetExampleComponent} from "./HttpGetExample/Components/get.example.component";
 import {GetExampleService} from "./HttpGetExample/Services/get.example.service";

@@ -14,4 +14,5 @@ export class NodeSqlService{
     return this.__http.get("http://localhost:8080/newsql")
       .map((res:Response)=>this.data=res.json().recordset);
   }
+
 }
