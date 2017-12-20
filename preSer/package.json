@@ -22,7 +22,11 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "core-js": "^2.4.1",
+    "express": "^4.16.2",
+    "mssql": "^4.1.0",
+    "mysql": "^2.15.0",
     "rxjs": "^5.5.2",
+    "sql": "^0.78.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

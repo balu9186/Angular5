@@ -14,18 +14,22 @@ import { PostExampleService } from "./HttpPostExample/Services/post.example.serv
 import {GetNodeComponent} from "./HttpGetNodeServer/Components/get.node.component";
 import {GetNodeService} from "./HttpGetNodeServer/Services/get.node.service";
 
+import {NodeSqlComponent} from "./NodeSQLExample/Components/node.sql.component";
+import {NodeSqlService} from "./NodeSQLExample/Services/node.sql.service";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     GetExampleComponent,
     PostExampleComponent,
-    GetNodeComponent
+    GetNodeComponent,
+    NodeSqlComponent
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule
   ],
-  providers: [GetExampleService,PostExampleService,GetNodeService],
-  bootstrap: [GetNodeComponent]
+  providers: [GetExampleService,PostExampleService,GetNodeService,NodeSqlService],
+  bootstrap: [NodeSqlComponent]
 })
 export class AppModule { }
