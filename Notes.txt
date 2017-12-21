@@ -17,3 +17,8 @@ Http Get example from Node server
 -------------
 
 Angular2 with NodeJS and SQL server
+
+20/12/2017
+-------------
+
+Angular2 with NodeJS and MongoDB
