@@ -16,6 +16,9 @@ import {GetNodeService} from "./HttpGetNodeServer/Services/get.node.service";
 import {NodeSqlComponent} from "./NodeSQLExample/Components/node.sql.component";
 import {NodeSqlService} from "./NodeSQLExample/Services/node.sql.service";
 
+import {NodeMongoComponent} from "./NodeMongoDBExample/Components/node.mongo.component";
+import {NodeMongoService} from "./NodeMongoDBExample/Services/node.mongo.service";
+
 
 @NgModule({
   declarations: [
@@ -23,12 +26,13 @@ import {NodeSqlService} from "./NodeSQLExample/Services/node.sql.service";
     GetExampleComponent,
     PostExampleComponent,
     GetNodeComponent,
-    NodeSqlComponent
+    NodeSqlComponent,
+    NodeMongoComponent
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule
   ],
-  providers: [GetExampleService,PostExampleService,GetNodeService,NodeSqlService],
-  bootstrap: [NodeSqlComponent]
+  providers: [GetExampleService,PostExampleService,GetNodeService,NodeSqlService,NodeMongoService],
+  bootstrap: [NodeMongoComponent]
 })
 export class AppModule { }
