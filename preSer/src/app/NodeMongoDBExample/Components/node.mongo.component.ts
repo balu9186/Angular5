@@ -8,11 +8,12 @@ import {NodeMongoService} from "../Services/node.mongo.service";
 
 export class NodeMongoComponent{
   data:any;
+  errMsg:any;
 
   constructor(private __nodeMongoServ:NodeMongoService){
     this.__nodeMongoServ.getData().subscribe(
       res=>this.data=res,
-      err=>console.log(err)
+      err=>this.errMsg=err
     );
   }
 }

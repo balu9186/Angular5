@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
 });
 
 app.get("/static",function(req,res){
-  fs.readFile("D:/Angular5/preSer/src/app/HttpGetNodeServer/Files/sample.json",function(err,data){
+  fs.readFile("D:/Angular5_Latest/preSer/src/app/HttpGetNodeServer/Files/sample.json",function(err,data){
     res.send(data);
   })
   }
