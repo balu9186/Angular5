@@ -22,3 +22,35 @@ Angular2 with NodeJS and SQL server
 -------------
 
 Angular2 with NodeJS and MongoDB
+
+21/12/2017
+-------------
+
+Error Handling in Services (Http Request)
+Implemented in "NodeMongoDBExample".
+
+
+22/12/2017
+-------------
+
+Angular4 Http Service example.
+
+
+23/12/2017
+--------------
+
+Mini project
+
+    Files created,
+
+        1.) JSON Server
+        2.) MySQL
+
+24/12/2017
+---------------
+
+Mini project
+
+    Files created,
+
+        3.) MongoDB
