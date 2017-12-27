@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
+
 
 import { AppComponent } from './app.component';
 import {GetExampleComponent} from "./HttpGetExample/Components/get.example.component";
@@ -23,6 +24,10 @@ import {NodeMongoService} from "./NodeMongoDBExample/Services/node.mongo.service
 import {Ang4Service} from "./Angular4Ex/Services/ang4.service";
 import {Ang4Component} from "./Angular4Ex/Components/ang4.component";
 
+import {MyInterceptor} from "./InterceptorEx/Interceptors/my.interceptor";
+import {InterceptorComponent} from "./InterceptorEx/Components/interceptor.component";
+import {InterceptorService} from "./InterceptorEx/Services/interceptor.service";
+
 
 @NgModule({
   declarations: [
@@ -32,12 +37,16 @@ import {Ang4Component} from "./Angular4Ex/Components/ang4.component";
     GetNodeComponent,
     NodeSqlComponent,
     NodeMongoComponent,
-    Ang4Component
+    Ang4Component,
+    InterceptorComponent
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule,HttpClientModule
   ],
-  providers: [GetExampleService,PostExampleService,GetNodeService,NodeSqlService,NodeMongoService,Ang4Service],
-  bootstrap: [Ang4Component]
+  providers: [GetExampleService,PostExampleService,GetNodeService,NodeSqlService,NodeMongoService,Ang4Service,InterceptorService,
+    {provide:"HTTP_INTERCEPTORS", useClass:MyInterceptor, multi:true}
+  ],
+  bootstrap: [InterceptorComponent]
 })
 export class AppModule { }
+
