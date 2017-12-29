@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body align="center">
+<a [routerLink]="['/']">Default</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/login']">Login</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/home']">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<hr>
+<br><br>
+<button (click)="gotoFinalPage()">Go to Final</button>
+<br>
+<router-outlet></router-outlet>
+
+</body>
+</html>
