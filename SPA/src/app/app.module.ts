@@ -20,16 +20,23 @@ import {MainComponent} from "./NestedRouting/Components/main.component";
 import {appRoutes} from "./NestedRouting/Routes/app.routes";
 import {MyService} from "./NestedRouting/Services/my.service";
 
+import {MainurlparamsComponent} from "./PassURLParams/Components/mainurlparams.component";
+import {AngularjsComponent} from "./PassURLParams/Components/angularjs.component";
+import {Angular5Component} from "./PassURLParams/Components/angular5.component";
+import {JavascriptComponent} from "./PassURLParams/Components/javascript.component";
+import {routePar} from "./PassURLParams/Routes/app.routes";
+
 @NgModule({
   declarations: [
     AppComponent,IndexComponent,LoginComponent,HomeComponent,DefaultComponent,FinalComponent,
-    PageoneComponent,PagetwoComponent,ChildoneComponent,ChildtwoComponent,MainComponent
+    PageoneComponent,PagetwoComponent,ChildoneComponent,ChildtwoComponent,MainComponent,
+    MainurlparamsComponent,AngularjsComponent,Angular5Component,JavascriptComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(routePar)
   ],
   providers: [MyService],
-  bootstrap: [MainComponent]
+  bootstrap: [MainurlparamsComponent]
 })
 export class AppModule { }
