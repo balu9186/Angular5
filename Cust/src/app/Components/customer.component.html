@@ -1,0 +1,26 @@
+<div>
+  Customer Code : <input type="text" [(ngModel)]="currCust.customercode" id="CustomerCode"><br>
+  Customer Name : <input type="text" [(ngModel)]="currCust.customername" id="CustomerName"><br>
+  Amount : <input type="text" [(ngModel)]="currCust.customeramount" id="Amount"><br><br>
+  <input type="button" (click)="Add()" value="Add Customer">&nbsp;
+  <input type="button" (click)="Update()" value="Update Customer">&nbsp;
+  <input type="button" (click)="Clear()" value="Clear">
+  <br><br>
+  <grid-ui [grid-DataBind]="customers" [grid-Entity]="'Customers'" (grid-Selected)="Select($event)">
+
+  </grid-ui>
+  <!--<table>
+    <tr>
+    <th>Customer Code</th>
+    <th>Customer Name</th>
+    <th>Amount</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let x of customers">
+      <td>{{x.customercode}}</td>
+      <td>{{x.customername}}</td>
+      <td>{{x.customeramount}}</td>
+      <td><a href="#" (click)="Select(x)">Select</a></td>
+    </tr>
+  </table>-->
+</div>
