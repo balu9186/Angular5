@@ -26,17 +26,26 @@ import {Angular5Component} from "./PassURLParams/Components/angular5.component";
 import {JavascriptComponent} from "./PassURLParams/Components/javascript.component";
 import {routePar} from "./PassURLParams/Routes/app.routes";
 
+import {CourseComponent} from "./RouteGuards/Components/course.component";
+import {JavaComponent} from "./RouteGuards/Components/java.component";
+import {SpringComponent} from "./RouteGuards/Components/spring.component";
+import {StrutsComponent} from "./RouteGuards/Components/struts.component";
+import {DotnetComponent} from "./RouteGuards/Components/dotnet.component";
+import {rgroute} from "./RouteGuards/Routes/app.routes";
+import {AuthGuard} from "./RouteGuards/RGServices/auth.guard";
+
 @NgModule({
   declarations: [
     AppComponent,IndexComponent,LoginComponent,HomeComponent,DefaultComponent,FinalComponent,
     PageoneComponent,PagetwoComponent,ChildoneComponent,ChildtwoComponent,MainComponent,
-    MainurlparamsComponent,AngularjsComponent,Angular5Component,JavascriptComponent
+    MainurlparamsComponent,AngularjsComponent,Angular5Component,JavascriptComponent,
+    CourseComponent,JavaComponent,SpringComponent,StrutsComponent,DotnetComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routePar)
+    RouterModule.forRoot(rgroute)
   ],
-  providers: [MyService],
-  bootstrap: [MainurlparamsComponent]
+  providers: [MyService,AuthGuard],
+  bootstrap: [CourseComponent]
 })
 export class AppModule { }
