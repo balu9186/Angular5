@@ -46,7 +46,7 @@ import {InterceptorService} from "./InterceptorEx/Services/interceptor.service";
   providers: [GetExampleService,PostExampleService,GetNodeService,NodeSqlService,NodeMongoService,Ang4Service,InterceptorService,
     {provide:"HTTP_INTERCEPTORS", useClass:MyInterceptor, multi:true}
   ],
-  bootstrap: [InterceptorComponent]
+  bootstrap: [NodeSqlComponent]
 })
 export class AppModule { }
 
