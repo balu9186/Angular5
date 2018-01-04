@@ -7,7 +7,9 @@ import {DotnetComponent} from "../Components/dotnet.component";
 import {AuthGuard} from "../RGServices/auth.guard";
 
 export const rgroute:Routes=[
-  {path:"java",component:JavaComponent,canActivate:[AuthGuard],canActivateChild:[AuthGuard]
+  {path:"java",component:JavaComponent,canActivate:[AuthGuard],canActivateChild:[AuthGuard],canDeactivate:[AuthGuard]
     ,children:[{path:"spring",component:SpringComponent},{path:"struts",component:StrutsComponent}]},
-  {path:"dotnet",component:DotnetComponent,canActivate:[AuthGuard]}
+  {path:"dotnet",component:DotnetComponent,canDeactivate:[AuthGuard]
+    /*,canActivate:[AuthGuard]*/
+  }
 ];
