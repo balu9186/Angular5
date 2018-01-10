@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 /*import {Routes} from "@angular/router";*/
 import {RouterModule} from "@angular/router";
+
+import {ExampleSixModule} from "./Example_6/Modules/example.six.module";
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 
@@ -34,6 +37,9 @@ import {DotnetComponent} from "./RouteGuards/Components/dotnet.component";
 import {rgroute} from "./RouteGuards/Routes/app.routes";
 import {AuthGuard} from "./RouteGuards/RGServices/auth.guard";
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,IndexComponent,LoginComponent,HomeComponent,DefaultComponent,FinalComponent,
@@ -41,11 +47,13 @@ import {AuthGuard} from "./RouteGuards/RGServices/auth.guard";
     MainurlparamsComponent,AngularjsComponent,Angular5Component,JavascriptComponent,
     CourseComponent,JavaComponent,SpringComponent,StrutsComponent,DotnetComponent
   ],
-  imports: [
+    imports: [
     BrowserModule,
-    RouterModule.forRoot(rgroute)
+    RouterModule.forRoot(rgroute),
+    ExampleSixModule,HttpClientModule
   ],
   providers: [MyService,AuthGuard],
-  bootstrap: [CourseComponent]
+  bootstrap: [AppComponent]
+
 })
 export class AppModule { }
