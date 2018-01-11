@@ -3,18 +3,15 @@ import {HttpClient} from "@angular/common/http";
 import 'rxjs/Rx';
 
 @Injectable()
-export class ExampleSixService{
+export class CountryService{
   data:any;
 
   constructor(private _http:HttpClient){
 
   }
 
-  /*https://restcountries.eu/rest/v2/all*/
   getData(){
-    return this._http.get("https://restcountries.eu/rest/v2/name/united")
+    return this._http.get("https://restcountries.eu/rest/v2/all")
       .map((res:Response)=>this.data=res);
-
-    /*return "from service call";*/
   }
 }

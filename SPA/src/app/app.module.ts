@@ -6,6 +6,8 @@ import {RouterModule} from "@angular/router";
 import {ExampleSixModule} from "./Example_6/Modules/example.six.module";
 import {HttpClientModule} from "@angular/common/http";
 
+import {CountriesModule} from "./Example_6/CountryModule/Modules/countries.module";
+
 import { AppComponent } from './app.component';
 
 import {IndexComponent} from "./Example_1/Components/index.component";
@@ -50,7 +52,7 @@ import {AuthGuard} from "./RouteGuards/RGServices/auth.guard";
     imports: [
     BrowserModule,
     RouterModule.forRoot(rgroute),
-    ExampleSixModule,HttpClientModule
+    ExampleSixModule,HttpClientModule,CountriesModule
   ],
   providers: [MyService,AuthGuard],
   bootstrap: [AppComponent]
