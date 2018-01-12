@@ -1,0 +1,23 @@
+/*.ng-valid:not(form){
+  border: 7px solid green;
+}
+
+.ng-invalid:not(form){
+  border: 7px solid red;
+}*/
+
+input:invalid{
+  border: 2px solid red;
+}
+
+input:valid{
+  border: 2px solid lightblue;
+}
+
+select:invalid{
+  border: 2px solid red;
+}
+
+select:valid{
+  border: 2px solid lightblue;
+}
