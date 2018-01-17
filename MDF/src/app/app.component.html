@@ -1,0 +1,50 @@
+<div class="container">
+  <form [formGroup]="userDetails" (ngSubmit)="details()">
+    <div class="form-group">
+      <label>First Name : </label>
+      <input type="text" formControlName="fname" class="form-control">
+    </div>
+    <div *ngIf="userDetails.controls['fname'].hasError('required')" class="alert alert-danger">
+      First Name required
+    </div>
+    <div *ngIf="userDetails.controls['fname'].hasError('minlength')" class="alert alert-danger">
+      First name should be minimum of 5 characters
+    </div>
+    <div class="form-group">
+      <label>Last Name : </label>
+      <input type="text" formControlName="lname" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Email : </label>
+      <input type="text" formControlName="email" class="form-control">
+    </div>
+    <div *ngIf="userDetails.controls['email'].hasError('required')" class="alert alert-danger">
+      Email required
+    </div>
+    <div formGroupName="addr">
+      <div class="form-group">
+        <label>Address Line 1 : </label>
+        <input type="text" formControlName="addr1" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Address Line 2 : </label>
+        <input type="text" formControlName="addr2" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Country : </label>
+      <select class="form-control" formControlName="country">
+        <option value="India">India</option>
+        <option value="India">USA</option>
+        <option value="India">UK</option>
+      </select>
+    </div>
+    <div *ngIf="userDetails.controls['country'].hasError('required')" class="alert alert-danger">
+      Please select Country
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary">
+    </div>
+  </form>
+
+</div>
