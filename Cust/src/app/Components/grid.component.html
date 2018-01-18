@@ -1,8 +1,8 @@
-<h2>Display {{Entity}} data</h2>
-<table>
+<h3>Display {{Entity}} data</h3>
+<table class="table">
   <tr>
     <th *ngFor="let headercol of gridColumns">{{headercol}}</th>
-    
+    <th></th>
   </tr>
   <tr *ngFor="let obj of gridData">
     <td *ngFor="let col of gridColumns">{{obj[col]}}</td>

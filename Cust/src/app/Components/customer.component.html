@@ -1,14 +1,40 @@
-<div>
-  Customer Code : <input type="text" [(ngModel)]="currCust.customercode" id="CustomerCode"><br>
-  Customer Name : <input type="text" [(ngModel)]="currCust.customername" id="CustomerName"><br>
-  Amount : <input type="text" [(ngModel)]="currCust.customeramount" id="Amount"><br><br>
-  <input type="button" (click)="Add()" value="Add Customer">&nbsp;
-  <input type="button" (click)="Update()" value="Update Customer">&nbsp;
-  <input type="button" (click)="Clear()" value="Clear">
-  <br><br>
-  <grid-ui [grid-DataBind]="customers" [grid-Entity]="'Customers'" (grid-Selected)="Select($event)">
+<div class="container">
+  <div class="form-group" align="center">
+    <h3><b>Customer Entry</b></h3>
+  </div>
+  <div class="form-group">
+    <label>Type : </label>
+    <select [(ngModel)]="currCust.customertype" (ngModelChange)="OnCustomerTypeChange($event)" class="form-control">
+      <option value="Lead">Lead</option>
+      <option value="Customer">Customer</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Customer Code : </label>
+    <input type="text" [(ngModel)]="currCust.customercode" id="CustomerCode" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Customer Name : </label>
+    <input type="text" [(ngModel)]="currCust.customername" id="CustomerName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Amount : </label>
+    <input type="text" [(ngModel)]="currCust.customeramount" id="CustomerAmount" class="form-control">
+  </div>
 
-  </grid-ui>
+  <div class="form-group" align="center">
+    <input type="button" [disabled]="!(currCust.IsValid())"  (click)="Add()" value="Add Customer" class="btn btn-primary">&nbsp;
+    <input type="button" [disabled]="!(currCust.IsValid())" (click)="Update()" value="Update Customer" class="btn btn-primary">&nbsp;
+    <input type="button" (click)="Clear()" value="Clear" class="btn btn-primary">
+  </div>
+
+  <br><br>
+  <div class="form-group" align="center">
+    <grid-ui [grid-DataBind]="customers" [grid-Entity]="'Customers'" (grid-Selected)="Select($event)">
+
+    </grid-ui>
+  </div>
+
   <!--<table>
     <tr>
     <th>Customer Code</th>
